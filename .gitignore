@@ -1,0 +1,7 @@
+/crawl_google_play/jobs/
+__pycache__/
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
