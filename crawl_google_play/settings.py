@@ -17,6 +17,7 @@ NEWSPIDER_MODULE = 'crawl_google_play.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'crawl_google_play (+http://www.yourdomain.com)'
+USER_AGENT = 'Alo Ventures (+http://alo.ventures)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -27,13 +28,14 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+#DOWNLOAD_DELAY =
+DOWNLOAD_TIMEOUT = 60
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 16
+CONCURRENT_REQUESTS_PER_DOMAIN = 100
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -52,9 +54,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-   'crawl_google_play.middlewares.ProxyMiddleware': 1,
-}
+#DOWNLOADER_MIDDLEWARES = {
+#   'crawl_google_play.middlewares.ProxyMiddleware': 1,
+#}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -75,12 +77,13 @@ ITEM_PIPELINES = {
 MONGODB_URI = 'mongodb://127.0.0.1:27017'
 MONGODB_DATABASE = 'scrapy'
 MONGODB_COLLECTION = 'Google_Play_apps'
+MONGODB_UNIQUE_KEY = 'Link'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-#AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-#AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_START_DELAY = 1
 # The maximum download delay to be set in case of high latencies
 #AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
