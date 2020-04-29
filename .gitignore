@@ -1,5 +1,6 @@
 /crawl_google_play/jobs/
 __pycache__/
+.idea/
 
 # General
 .DS_Store
