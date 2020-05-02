@@ -32,6 +32,18 @@ class GoogleSpider(CrawlSpider):
     #     item['url'] = response.url
     #     item['num'] = response.xpath("//div[@itemprop='numDownloads']").xpath("text()").extract_first()
     #     yield item
+#         if len(app_urls) == 60:
+#            self.start += 60
+#            yield scrapy.FormRequest(
+#                response.url,
+#                formdata={
+#                    'start': '%s' % self.start,
+#                    'num': '60',
+#                    'ipf': '1',
+#                    'xhr': '1',
+#                },
+#                callback=self.parse_category_page
+#            )
 
     def parse_link(self,response):
         items = []
