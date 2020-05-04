@@ -2,6 +2,8 @@
 
 Use scrapy framework to scrape application data from the Google Play and save to Mongodb.
 
+I crawled about 230k apps using this script, but I know there are about 1.3 millon apps in Google Play Store, meaning that this recursive way miss part of the apps in Google Play. It may because of the Dynamic Loading/AJAX used in Google's website, but I can't parse the ajax request correctly. If you know how to crawl all apps in Google Play, please contact me at byxiaohanzhang@foxmail.com
+
 ## Prerequirement
 
 ### Install Python3
