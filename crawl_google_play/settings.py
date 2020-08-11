@@ -76,7 +76,7 @@ ITEM_PIPELINES = {
 
 MONGODB_URI = 'mongodb://127.0.0.1:27017'
 MONGODB_DATABASE = 'scrapy'
-MONGODB_COLLECTION = 'Google_Play_apps'
+MONGODB_COLLECTION = 'FDA_apps'
 MONGODB_UNIQUE_KEY = 'Link'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
